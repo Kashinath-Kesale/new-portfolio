@@ -49,7 +49,7 @@ npm start
 ## 👨‍💻 Author
 
 **Kashinath Kesale**  
-📧 Email: [your email here]  
+📧 Email: [kashinathkesale1@gmail.com]  
 🔗 GitHub: [https://github.com/Kashinath-Kesale](https://github.com/Kashinath-Kesale)  
 🌐 Portfolio: [kashinath-kesale-portfolio.vercel.app](https://kashinath-kesale-portfolio.vercel.app)
 
