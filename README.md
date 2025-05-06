@@ -1,4 +1,4 @@
-# 🧰💼 PortFolio | Kashinath Kesale
+# 🧰 PortFolio | Kashinath Kesale
 
 This is a fully responsive personal portfolio website built using **React.js** and **Tailwind CSS**, deployed on **Vercel**. It showcases my profile, skills, education, projects, and contact information in a modern and elegant design.
 
