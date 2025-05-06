@@ -10,6 +10,7 @@ This is a fully responsive personal portfolio website built using **React.js** a
 ## 📸 Preview
 
 ![Portfolio Preview](public/preview.png) <!-- Optional: Replace with your own image path -->
+![Portfolio Preview](public/preview2.png) 
 
 ---
 
