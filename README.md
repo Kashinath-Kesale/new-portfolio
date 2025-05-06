@@ -1,4 +1,4 @@
-# 💼 PortFolio | Kashinath Kesale
+# 👨🏻‍💻❤ PortFolio | Kashinath Kesale
 
 This is a fully responsive personal portfolio website built using **React.js** and **Tailwind CSS**, deployed on **Vercel**. It showcases my profile, skills, education, projects, and contact information in a modern and elegant design.
 
@@ -34,7 +34,6 @@ This is a fully responsive personal portfolio website built using **React.js** a
 
 ---
 
-
 ## 📦 Installation
 
 ```bash
@@ -42,18 +41,19 @@ git clone https://github.com/Kashinath-Kesale/new-portfolio.git
 cd new-portfolio
 npm install
 npm start
+```
 
-🧑‍💻 Author
-Kashinath Kesale
-📧 Email: [your email here]
-🔗 GitHub: https://github.com/Kashinath-Kesale
-🌐 Portfolio: kashinath-kesale-portfolio.vercel.app
+---
 
-📜 License
+## 👨‍💻 Author
 
-This project is open-source and available under the MIT License.
+**Kashinath Kesale**  
+📧 Email: [your email here]  
+🔗 GitHub: [https://github.com/Kashinath-Kesale](https://github.com/Kashinath-Kesale)  
+🌐 Portfolio: [kashinath-kesale-portfolio.vercel.app](https://kashinath-kesale-portfolio.vercel.app)
 
+---
 
+## 📜 License
 
-
-
+This project is open-source and available under the **MIT License**.
