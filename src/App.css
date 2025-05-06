@@ -1,0 +1,19 @@
+/* App.css – simplified if using Tailwind */
+.App {
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Optional global anchor tag styling */
+a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+html {
+  scroll-behavior: smooth;
+}
