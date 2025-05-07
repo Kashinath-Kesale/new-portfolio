@@ -6,7 +6,7 @@ function Education() {
   const educationData = [
     {
       degree: 'B.E. in Electronics & Telecommunication',
-      university: 'Wadia College of Engineering Pune',
+      university: 'Wadia College of Engineering Pune | SPPU',
       duration: '2022 - 2026',
     },
     {
@@ -17,7 +17,7 @@ function Education() {
     {
       degree: 'Secondary (10th)',
       university: 'Parimal Vidyalaya Latur',
-      duration: '2018 - 2020',
+      duration: '2019 - 2020',
     //   grade: 'Percentage: 96%',
     },
   ];

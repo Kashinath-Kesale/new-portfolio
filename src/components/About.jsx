@@ -13,10 +13,10 @@ function About() {
 
 
         <p className="text-lg leading-relaxed">
-          Hello! I'm <span className="font-semibold text-orange-600">Kashinath Kesale</span>, a passionate Software Developer with a strong foundation in the MERN stack and Java + DSA. I'm currently pursuing my degree in Electronics and Telecommunication Engineering and working toward mastering full-stack development and problem solving.
+          Hello! I'm <span className="font-semibold text-orange-600">Kashinath Kesale</span>, a passionate software developer with a strong foundation in the MERN stack and Data Structures & Algorithms (DSA). Currently pursuing a degree in Electronics and Telecommunication Engineering, I’m focused on mastering full-stack development and sharpening my problem-solving skills.
         </p>
         <p className="text-lg leading-relaxed mt-4">
-          I love building efficient, scalable applications and solving algorithmic challenges. With hands-on experience in React, Node.js, MongoDB, and Express, I’m always eager to learn and take on new challenges.
+          I enjoy building efficient, scalable applications and tackling algorithmic challenges. With practical experience in React, Node.js, Express, and MongoDB, I’m driven by a passion for continuous learning and solving real-world problems through code.
         </p>
       </div>
     </section>
