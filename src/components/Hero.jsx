@@ -55,7 +55,7 @@ function Hero() {
             Hire Me
           </a>
           <a
-            href="/Kashinath_Kesale_Resume.pdf"
+            href="/Kashinath_Kesale_Resume_2025.pdf"
             download
             className="fiery-button hover:bg-orange-100 transition-colors"
           >
