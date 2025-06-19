@@ -77,7 +77,7 @@ function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: i * 0.15 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-white via-indigo-50 to-blue-50 border border-indigo-100 rounded-2xl shadow-lg p-6 min-w-[260px] max-w-xs w-full sm:w-auto flex-1 flex flex-col items-center hover:-rotate-1 hover:scale-105 hover:shadow-indigo-200/60 transition-transform duration-300 mx-auto"
+            className="bg-gradient-to-br from-white via-indigo-50 to-blue-50 border border-indigo-100 rounded-2xl shadow-lg p-6 min-w-[260px] max-w-xs w-full sm:w-auto md:w-80 flex-1 flex flex-col items-center hover:-rotate-1 hover:scale-105 hover:shadow-indigo-200/60 transition-transform duration-300 mx-auto"
           >
             <div className="flex items-center gap-2 mb-4">
               {group.icon}
