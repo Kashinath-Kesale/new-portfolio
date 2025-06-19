@@ -23,13 +23,13 @@ function Education() {
   ];
 
   return (
-    <section id="education" className="bg-gray-900 text-white py-16 px-6">
-      <h2 className="text-4xl font-bold text-orange-400 text-center mb-10 flex items-center justify-center gap-2">
-        <FaGraduationCap className="text-orange-400" />
+    <section id="education" className="bg-gradient-to-br from-indigo-50 via-white to-blue-100 text-slate-800 py-12 px-4">
+      <h2 className="text-3xl font-bold text-center text-indigo-600 mb-12 flex items-center justify-center gap-2">
+        <FaGraduationCap className="text-indigo-600" />
         Education
       </h2>
 
-      <div className="flex flex-col items-center gap-8">
+      <div className="flex flex-col items-center gap-8 max-w-2xl mx-auto">
         {educationData.map((edu, index) => (
           <motion.div
             key={index}
@@ -37,14 +37,12 @@ function Education() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="bg-gray-800 p-6 rounded-xl w-full max-w-2xl border border-gray-700 hover:border-orange-400 transition-all duration-300 hover:shadow-orange-400/20 hover:shadow-lg"
+            whileHover={{ scale: 1.04, boxShadow: '0 8px 32px 0 rgba(49,70,178,0.13), 0 2px 8px 0 rgba(49,70,178,0.10)' }}
+            className="bg-white/90 border border-indigo-100 rounded-2xl shadow-lg p-6 w-full flex flex-col items-center transition-transform duration-300"
           >
-            <h3 className="text-2xl font-semibold text-orange-300">{edu.degree}</h3>
-            <p className="text-gray-300 mt-1">{edu.university}</p>
-            <p className="text-gray-400 text-sm">{edu.duration}</p>
-            {edu.grade && (
-              <p className="mt-2 text-green-400 font-medium">{edu.grade}</p>
-            )}
+            <h3 className="text-xl font-semibold text-indigo-700 text-center mb-2">{edu.degree}</h3>
+            <p className="text-slate-700 text-center mb-1">{edu.university}</p>
+            <p className="text-indigo-500 text-sm text-center">{edu.duration}</p>
           </motion.div>
         ))}
       </div>
