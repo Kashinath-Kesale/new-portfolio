@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaHome, FaUser, FaLaptopCode, FaGraduationCap, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
 
 function Header({ onNavigate }) {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [scrolled, setScrolled] = useState(false);
   const [hoveredNav, setHoveredNav] = useState(null);
@@ -147,54 +146,6 @@ function Header({ onNavigate }) {
               ))}
             </ul>
           </div>
-          {/* Hamburger Button (show only when expanded on mobile) */}
-          <div className="flex items-center">
-            <AnimatePresence>
-              {hoveredNav && (
-                <motion.button
-                  className="md:hidden text-3xl text-orange-500 focus:outline-none ml-2"
-                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  aria-label="Toggle menu"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 20 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {isMobileMenuOpen ? '✕' : '☰'}
-                </motion.button>
-              )}
-            </AnimatePresence>
-          </div>
-          {/* Mobile Menu */}
-          <AnimatePresence>
-            {isMobileMenuOpen && (
-              <motion.ul
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
-                className="absolute top-full left-0 w-full flex flex-col gap-2 px-8 pb-4 pt-2 bg-white/95 backdrop-blur-lg rounded-b-2xl text-base font-medium shadow-xl border-x border-b border-gray-200/80 z-50"
-              >
-                {navItems.map(item => (
-                  <li key={item.id} className="relative">
-                    <ScrollLink
-                      to={item.id}
-                      smooth={true}
-                      offset={-70}
-                      duration={500}
-                      spy={true}
-                      onSetActive={() => setActiveSection(item.id)}
-                      className={`block px-2 py-2 rounded transition-colors duration-200 ${activeSection === item.id ? 'text-orange-600 bg-orange-50 font-semibold' : 'text-gray-700 hover:text-orange-400'}`}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      <span className="mr-2 align-middle">{item.icon}</span>
-                      {item.label}
-                    </ScrollLink>
-                  </li>
-                ))}
-              </motion.ul>
-            )}
-          </AnimatePresence>
         </motion.nav>
       </motion.header>
       {/* Contact Modal */}
