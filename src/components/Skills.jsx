@@ -64,12 +64,12 @@ const skillGroups = [
 
 function Skills() {
   return (
-    <section id="skills" className="bg-gradient-to-br from-indigo-50 via-white to-blue-100 text-slate-800 py-8 px-4">
+    <section id="skills" className="bg-gradient-to-br from-indigo-50 via-white to-blue-100 text-slate-800 py-8 px-4 sm:px-6 md:px-8">
       <h2 className="text-3xl font-bold text-center text-indigo-600 mb-8 flex items-center justify-center gap-2">
         <FaCogs className="text-indigo-600" />
         Skills
       </h2>
-      <div className="w-full flex flex-col md:flex-row flex-wrap justify-center gap-6">
+      <div className="w-full flex flex-col md:flex-row flex-wrap justify-center gap-6 items-center">
         {skillGroups.map((group, i) => (
           <motion.div
             key={group.title}
@@ -77,7 +77,7 @@ function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: i * 0.15 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-white via-indigo-50 to-blue-50 border border-indigo-100 rounded-2xl shadow-lg p-6 min-w-[260px] max-w-xs flex-1 flex flex-col items-center hover:-rotate-1 hover:scale-105 hover:shadow-indigo-200/60 transition-transform duration-300"
+            className="bg-gradient-to-br from-white via-indigo-50 to-blue-50 border border-indigo-100 rounded-2xl shadow-lg p-6 min-w-[260px] max-w-xs w-full sm:w-auto flex-1 flex flex-col items-center hover:-rotate-1 hover:scale-105 hover:shadow-indigo-200/60 transition-transform duration-300 mx-auto"
           >
             <div className="flex items-center gap-2 mb-4">
               {group.icon}
