@@ -64,9 +64,9 @@ const skillGroups = [
 
 function Skills() {
   return (
-    <section id="skills" className="bg-gradient-to-br from-indigo-50 via-white to-blue-100 text-slate-800 py-8 px-4 sm:px-6 md:px-8">
-      <h2 className="text-3xl font-bold text-center text-indigo-600 mb-8 flex items-center justify-center gap-2">
-        <FaCogs className="text-indigo-600" />
+    <section id="skills" className="bg-gradient-to-br from-indigo-50 via-white to-blue-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 text-slate-800 dark:text-slate-100 py-8 px-4 sm:px-6 md:px-8 transition-colors duration-500">
+      <h2 className="text-3xl font-bold text-center text-indigo-600 dark:text-yellow-400 mb-8 flex items-center justify-center gap-2">
+        <FaCogs className="text-indigo-600 dark:text-yellow-400" />
         Skills
       </h2>
       <div className="w-full flex flex-col md:flex-row flex-wrap justify-center gap-6 items-start">
@@ -77,11 +77,11 @@ function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: i * 0.15 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-white via-indigo-50 to-blue-50 border border-indigo-100 rounded-2xl shadow-lg p-6 min-w-[260px] max-w-xs w-full sm:w-auto md:w-80 flex-1 flex flex-col items-center hover:-rotate-1 hover:scale-105 hover:shadow-indigo-200/60 transition-transform duration-300 mx-auto"
+            className="bg-gradient-to-br from-white via-indigo-50 to-blue-50 dark:from-slate-800 dark:via-slate-900 dark:to-slate-900 border border-indigo-100 dark:border-slate-700 rounded-2xl shadow-lg p-6 min-w-[260px] max-w-xs w-full sm:w-auto md:w-80 flex-1 flex flex-col items-center hover:-rotate-1 hover:scale-105 hover:shadow-indigo-200/60 dark:hover:shadow-yellow-200/20 transition-transform duration-300 mx-auto transition-colors"
           >
             <div className="flex items-center gap-2 mb-4">
               {group.icon}
-              <span className="text-lg font-semibold text-indigo-700">{group.title}</span>
+              <span className="text-lg font-semibold text-indigo-700 dark:text-yellow-300">{group.title}</span>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               {group.skills.map((skill, idx) => (
@@ -91,10 +91,10 @@ function Skills() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: idx * 0.07 }}
                   viewport={{ once: true }}
-                  className="flex flex-col items-center gap-1 bg-indigo-50 rounded-xl px-3 py-2 shadow hover:scale-110 hover:shadow-indigo-200/60 border border-transparent hover:border-indigo-300 transition-all duration-300 min-w-[80px] group"
+                  className="flex flex-col items-center gap-1 bg-indigo-50 dark:bg-slate-800 rounded-xl px-3 py-2 shadow hover:scale-110 hover:shadow-indigo-200/60 dark:hover:shadow-yellow-200/20 border border-transparent hover:border-indigo-300 dark:hover:border-yellow-400 transition-all duration-300 min-w-[80px] group transition-colors"
                 >
-                  <span className="group-hover:shadow-[0_0_8px_2px_rgba(99,102,241,0.15)] transition-all duration-300 rounded-full">{skill.icon}</span>
-                  <span className="text-xs font-medium mt-1 text-slate-700 text-center">{skill.name}</span>
+                  <span className="group-hover:shadow-[0_0_8px_2px_rgba(99,102,241,0.15)] dark:group-hover:shadow-[0_0_8px_2px_rgba(250,204,21,0.15)] transition-all duration-300 rounded-full">{skill.icon}</span>
+                  <span className="text-xs font-medium mt-1 text-slate-700 dark:text-slate-200 text-center transition-colors">{skill.name}</span>
                 </motion.div>
               ))}
             </div>

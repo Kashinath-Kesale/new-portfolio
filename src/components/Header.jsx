@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink, Events, scrollSpy } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaHome, FaUser, FaLaptopCode, FaGraduationCap, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaUser, FaLaptopCode, FaGraduationCap, FaProjectDiagram, FaEnvelope, FaMoon, FaSun } from 'react-icons/fa';
 
-function Header({ onNavigate }) {
+function Header({ onNavigate, darkMode, toggleDarkMode }) {
   const [activeSection, setActiveSection] = useState('home');
   const [scrolled, setScrolled] = useState(false);
   const [hoveredNav, setHoveredNav] = useState(null);
@@ -111,8 +111,8 @@ function Header({ onNavigate }) {
           }}
         >
           <div
-            className={`flex items-center justify-center bg-white/80 backdrop-blur-md rounded-2xl shadow-xl border border-indigo-100/60 px-3 py-2 transition-all duration-300`}
-            style={{background: '#fff', opacity: 1, zIndex: 300, minWidth: '18rem', boxShadow: '0 8px 32px 0 rgba(49,70,178,0.10), 0 2px 8px 0 rgba(49,70,178,0.08)'}}
+            className={`flex items-center justify-center bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-2xl shadow-xl border border-indigo-100/60 px-3 py-2 transition-all duration-300`}
+            style={{background: darkMode ? '#181e2a' : '#fff', opacity: 1, zIndex: 300, minWidth: '18rem', boxShadow: '0 8px 32px 0 rgba(49,70,178,0.10), 0 2px 8px 0 rgba(49,70,178,0.08)'}}
             onMouseEnter={e => e.currentTarget.classList.add('header-pop')}
             onMouseLeave={e => e.currentTarget.classList.remove('header-pop')}
           >
@@ -120,7 +120,7 @@ function Header({ onNavigate }) {
               {navItems.map(item => (
                 <li key={item.id} className="relative flex items-center justify-center">
                   <button
-                    className={`flex items-center px-2 py-2 rounded-md transition-all duration-200 w-full justify-center group ${activeSection === item.id ? 'text-indigo-600 font-semibold bg-indigo-50 shadow-[0_0_8px_2px_rgba(99,102,241,0.12)] scale-110' : 'text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/70 hover:scale-110 hover:shadow-[0_0_8px_2px_rgba(99,102,241,0.10)]'}`}
+                    className={`flex items-center px-2 py-2 rounded-md transition-all duration-200 w-full justify-center group ${activeSection === item.id ? 'text-indigo-600 font-semibold bg-indigo-50 dark:bg-slate-800 shadow-[0_0_8px_2px_rgba(99,102,241,0.12)] scale-110' : 'text-slate-700 dark:text-slate-200 hover:text-indigo-600 hover:bg-indigo-50/70 dark:hover:bg-slate-800/70 hover:scale-110 hover:shadow-[0_0_8px_2px_rgba(99,102,241,0.10)]'}`}
                     onMouseEnter={() => setHoveredNav(item.id)}
                     onMouseLeave={() => setHoveredNav(null)}
                     aria-label={item.label}
@@ -145,6 +145,24 @@ function Header({ onNavigate }) {
                 </li>
               ))}
             </ul>
+            {/* Dark mode toggle button */}
+            <button
+              onClick={toggleDarkMode}
+              aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+              className="ml-4 p-2 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:focus:ring-slate-600 bg-indigo-50 dark:bg-slate-800 hover:bg-indigo-100 dark:hover:bg-slate-700 text-indigo-600 dark:text-yellow-400 shadow"
+              title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              <motion.span
+                key={darkMode ? 'moon' : 'sun'}
+                initial={{ rotate: 90, opacity: 0, scale: 0.7 }}
+                animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                exit={{ rotate: -90, opacity: 0, scale: 0.7 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                className="flex items-center justify-center"
+              >
+                {darkMode ? <FaMoon size={22} /> : <FaSun size={22} />}
+              </motion.span>
+            </button>
           </div>
         </motion.nav>
       </motion.header>

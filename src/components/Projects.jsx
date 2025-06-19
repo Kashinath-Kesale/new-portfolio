@@ -33,9 +33,9 @@ const projects = [
 
 function Projects() {
   return (
-    <section id="projects" className="bg-gradient-to-br from-indigo-50 via-white to-blue-100 text-slate-800 py-16 px-4">
-      <h2 className="text-3xl font-bold text-center text-indigo-600 mb-12 flex items-center justify-center gap-2">
-        <FaTasks className="text-indigo-600" />
+    <section id="projects" className="bg-gradient-to-br from-indigo-50 via-white to-blue-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 text-slate-800 dark:text-slate-100 py-16 px-4 transition-colors duration-500">
+      <h2 className="text-3xl font-bold text-center text-indigo-600 dark:text-yellow-400 mb-12 flex items-center justify-center gap-2">
+        <FaTasks className="text-indigo-600 dark:text-yellow-400" />
         Projects
       </h2>
 
@@ -51,32 +51,32 @@ function Projects() {
             whileHover={{ scale: 1.035, boxShadow: '0 12px 36px 0 rgba(49,70,178,0.16), 0 2px 8px 0 rgba(49,70,178,0.13)' }}
             transition={{ duration: 0.6, delay: i * 0.2 }}
             viewport={{ once: true }}
-            className="group bg-white/90 border border-indigo-100 rounded-2xl shadow-lg p-0 flex flex-col items-center overflow-hidden transition-transform duration-300 hover:shadow-indigo-200/60 hover:border-indigo-300 relative"
+            className="group bg-white/90 dark:bg-slate-800/90 border border-indigo-100 dark:border-slate-700 rounded-2xl shadow-lg p-0 flex flex-col items-center overflow-hidden transition-transform duration-300 hover:shadow-indigo-200/60 dark:hover:shadow-yellow-200/20 hover:border-indigo-300 dark:hover:border-yellow-400 relative transition-colors"
           >
             {/* Project Icon with tooltip */}
             <div className="flex items-center justify-center mt-6 mb-2 relative">
-              <div className="bg-white/80 rounded-full p-3 shadow group-hover:shadow-indigo-200/60 relative">
+              <div className="bg-white/80 dark:bg-slate-900/80 rounded-full p-3 shadow group-hover:shadow-indigo-200/60 dark:group-hover:shadow-yellow-200/20 relative transition-colors">
                 <span className="group relative">
                   {proj.icon}
-                  <span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-3 py-1 rounded bg-slate-900 text-white text-xs shadow-lg z-50 whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-200">
+                  <span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-3 py-1 rounded bg-slate-900 dark:bg-slate-800 text-white text-xs shadow-lg z-50 whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-200">
                     {proj.tech.join(', ')}
                   </span>
                 </span>
               </div>
               {i === 0 && (
-                <span className="absolute -top-2 -right-2 bg-gradient-to-r from-indigo-500 to-blue-400 text-white text-xs font-bold px-2 py-0.5 rounded-full shadow">New</span>
+                <span className="absolute -top-2 -right-2 bg-gradient-to-r from-indigo-500 to-blue-400 dark:from-yellow-400 dark:to-yellow-300 text-white text-xs font-bold px-2 py-0.5 rounded-full shadow">New</span>
               )}
             </div>
             {/* Project Content */}
             <div className="flex-1 flex flex-col items-center justify-between p-6 w-full">
               <div className="w-full flex flex-col items-center">
                 <div className="flex items-center gap-2 mb-2">
-                  <h3 className="text-2xl font-bold text-indigo-700 group-hover:text-indigo-800 transition-colors text-center">
+                  <h3 className="text-2xl font-bold text-indigo-700 dark:text-yellow-300 group-hover:text-indigo-800 dark:group-hover:text-yellow-400 transition-colors text-center">
                     {proj.title}
                   </h3>
-                  <FaExternalLinkAlt className="text-indigo-400 text-base ml-1 group-hover:text-indigo-600 transition-colors" />
+                  <FaExternalLinkAlt className="text-indigo-400 dark:text-yellow-400 text-base ml-1 group-hover:text-indigo-600 dark:group-hover:text-yellow-300 transition-colors" />
                 </div>
-                <p className="text-slate-700 mb-4 text-base leading-relaxed text-center">
+                <p className="text-slate-700 dark:text-slate-200 mb-4 text-base leading-relaxed text-center">
                   {proj.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mt-2 justify-center">
@@ -87,7 +87,7 @@ function Projects() {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3, delay: idx * 0.07 }}
                       viewport={{ once: true }}
-                      className="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-semibold shadow hover:bg-indigo-100 transition-colors"
+                      className="px-3 py-1 rounded-full bg-indigo-50 dark:bg-slate-700 text-indigo-700 dark:text-yellow-300 text-xs font-semibold shadow hover:bg-indigo-100 dark:hover:bg-yellow-900 transition-colors"
                     >
                       {tech}
                     </motion.span>

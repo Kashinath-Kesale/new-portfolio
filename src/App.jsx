@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 // import About from './components/About';
@@ -11,12 +11,36 @@ function App() {
   // Track which section is visible
   const [visibleSection, setVisibleSection] = useState('home');
 
+  // Dark mode state
+  const [darkMode, setDarkMode] = useState(() => {
+    // Try to get from localStorage or system preference
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('theme');
+      if (stored) return stored === 'dark';
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [darkMode]);
+
   // Handler for header navigation
   const handleNav = (section) => setVisibleSection(section);
 
+  // Handler for dark mode toggle
+  const toggleDarkMode = () => setDarkMode((prev) => !prev);
+
   return (
     <>
-      <Header onNavigate={handleNav} />
+      <Header onNavigate={handleNav} darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <main className="pt-10">
         {visibleSection === 'home' && <Hero />}
         {visibleSection === 'skills' && <Skills />}

@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  transition: background 0.4s, color 0.4s;
+}
+body {
+  @apply bg-white text-slate-800 transition-colors duration-500;
+}
+.dark body {
+  @apply bg-slate-900 text-slate-100 transition-colors duration-500;
+}
+
+section {
+  @apply transition-colors duration-500;
+}
+
 .fiery-button {
   position: relative;
   padding: 10px 20px;

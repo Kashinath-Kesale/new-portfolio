@@ -7,7 +7,7 @@ function Hero() {
   const [showAbout, setShowAbout] = useState(false);
 
   return (
-    <section className="relative text-center py-12 md:py-20 bg-gradient-to-br from-indigo-50 via-white to-blue-100 overflow-hidden" id="home">
+    <section className="relative text-center py-12 md:py-20 bg-gradient-to-br from-indigo-50 via-white to-blue-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden" id="home">
       {/* Animated Blurred Gradient Background */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -16,8 +16,8 @@ function Hero() {
         aria-hidden
         className="absolute inset-0 w-full h-full z-0 pointer-events-none"
       >
-        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-gradient-to-tr from-indigo-300 via-blue-300 to-sky-200 opacity-40 blur-3xl rounded-full" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-200 via-indigo-200 to-white opacity-30 blur-2xl rounded-full" />
+        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-gradient-to-tr from-indigo-300 via-blue-300 to-sky-200 dark:from-indigo-900 dark:via-slate-800 dark:to-slate-900 opacity-40 blur-3xl rounded-full transition-colors duration-500" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-200 via-indigo-200 to-white dark:from-slate-800 dark:via-slate-900 dark:to-slate-900 opacity-30 blur-2xl rounded-full transition-colors duration-500" />
       </motion.div>
 
       <div className="relative flex flex-col items-center gap-4 z-10">
@@ -38,7 +38,7 @@ function Hero() {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl md:text-6xl font-extrabold text-slate-800 drop-shadow-lg"
+          className="text-4xl md:text-6xl font-extrabold text-slate-800 dark:text-slate-100 drop-shadow-lg transition-colors duration-500"
         >
           Kashinath Kesale
         </motion.h1>
@@ -48,10 +48,10 @@ function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-lg md:text-2xl mt-2 text-slate-600 font-medium"
+          className="text-lg md:text-2xl mt-2 text-slate-600 dark:text-slate-300 font-medium transition-colors duration-500"
         >
           I'm a{' '}
-          <span className="text-indigo-600 font-semibold">
+          <span className="text-indigo-600 dark:text-yellow-400 font-semibold transition-colors duration-500">
             <Typewriter
               words={['Software Developer', 'MERN Stack Developer', 'DSA & Problem Solving Enthusiast', 'Open to Internships & Full-Time Roles']}
               loop={0}
@@ -83,14 +83,14 @@ function Hero() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 30 }}
               transition={{ duration: 0.5 }}
-              className="w-full max-w-2xl mx-auto mt-8 bg-white/80 rounded-2xl shadow-lg px-6 py-8 text-left text-gray-800 border border-gray-200"
+              className="w-full max-w-2xl mx-auto mt-8 bg-white/80 dark:bg-slate-800/90 rounded-2xl shadow-lg px-6 py-8 text-left text-gray-800 dark:text-slate-100 border border-gray-200 dark:border-slate-700 transition-colors duration-500"
             >
-              <h2 className="text-3xl font-bold text-center text-slate-800 mb-6 flex items-center justify-center gap-2">
-                <FaUser className="text-indigo-600" />
+              <h2 className="text-3xl font-bold text-center text-slate-800 dark:text-slate-100 mb-6 flex items-center justify-center gap-2">
+                <FaUser className="text-indigo-600 dark:text-yellow-400" />
                 About Me
               </h2>
               <p className="text-lg leading-relaxed">
-                Hello! I'm <span className="font-semibold text-indigo-600">Kashinath Kesale</span>, a final-year engineering student and passionate software developer with a strong foundation in full-stack development and Data Structures & Algorithms.
+                Hello! I'm <span className="font-semibold text-indigo-600 dark:text-yellow-400">Kashinath Kesale</span>, a final-year engineering student and passionate software developer with a strong foundation in full-stack development and Data Structures & Algorithms.
               </p>
               <p className="text-lg leading-relaxed mt-4">
                 I enjoy building efficient, scalable applications and solving real-world problems through code using technologies like React, Node.js, Express, and MongoDB. I'm driven by continuous learning, clean architecture, and impactful solutions.
