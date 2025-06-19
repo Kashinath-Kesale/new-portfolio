@@ -69,7 +69,7 @@ function Skills() {
         <FaCogs className="text-indigo-600" />
         Skills
       </h2>
-      <div className="w-full flex flex-col md:flex-row flex-wrap justify-center gap-6 items-center">
+      <div className="w-full flex flex-col md:flex-row flex-wrap justify-center gap-6 items-start">
         {skillGroups.map((group, i) => (
           <motion.div
             key={group.title}
