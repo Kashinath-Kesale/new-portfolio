@@ -13,11 +13,9 @@ function App() {
 
   // Dark mode state
   const [darkMode, setDarkMode] = useState(() => {
-    // Try to get from localStorage or system preference
     if (typeof window !== 'undefined') {
       const stored = localStorage.getItem('theme');
-      if (stored) return stored === 'dark';
-      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+      return stored === 'dark'; // default to false (light mode) if nothing stored
     }
     return false;
   });

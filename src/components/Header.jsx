@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link as ScrollLink, Events, scrollSpy } from 'react-scroll';
+import { Events, scrollSpy } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaHome, FaUser, FaLaptopCode, FaGraduationCap, FaProjectDiagram, FaEnvelope, FaMoon, FaSun } from 'react-icons/fa';
+import { FaHome, FaLaptopCode, FaGraduationCap, FaProjectDiagram, FaEnvelope, FaMoon, FaSun } from 'react-icons/fa';
 
 function Header({ onNavigate, darkMode, toggleDarkMode }) {
   const [activeSection, setActiveSection] = useState('home');
@@ -39,16 +39,12 @@ function Header({ onNavigate, darkMode, toggleDarkMode }) {
 
   // Listen to hash changes for active section
   useEffect(() => {
-    const handleSetActive = (to) => setActiveSection(to);
     scrollSpy.update();
     window.addEventListener('hashchange', () => scrollSpy.update());
     return () => {
       window.removeEventListener('hashchange', () => scrollSpy.update());
     };
   }, []);
-
-  // Width is always compact
-  const navWidth = 'max-w-[4.5rem]';
 
   // Contact Modal Content
   const ContactModal = () => (
