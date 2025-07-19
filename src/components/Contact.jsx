@@ -47,7 +47,7 @@ function Contact() {
         <FaEnvelope className="text-indigo-600 dark:text-yellow-400" />
         Contact
       </h2>
-      <p className="text-base text-slate-500 dark:text-slate-300 mb-8 text-center max-w-xl">
+      <p className="text-base text-slate-500 dark:text-slate-200 mb-8 text-center max-w-xl">
         Let's connect! Feel free to reach out via any of the methods below.
       </p>
       <motion.div
@@ -73,11 +73,11 @@ function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative flex flex-col items-center justify-center w-16 h-16 rounded-full ring-2 ${method.color} ${method.hover} shadow transition-all duration-300 group dark:bg-slate-800 dark:text-yellow-400 dark:ring-yellow-400 dark:hover:bg-yellow-900 dark:hover:text-yellow-300`}
+                className={`relative flex flex-col items-center justify-center w-16 h-16 rounded-full ring-2 ${method.color} ${method.hover} shadow transition-all duration-300 group dark:bg-slate-800 dark:text-indigo-400 dark:ring-indigo-500 dark:hover:bg-indigo-900 dark:hover:text-yellow-300`}
                 title={method.label}
               >
                 <span className="text-2xl">{method.icon}</span>
-                <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 text-xs text-slate-500 dark:text-yellow-300 opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 pointer-events-none">
+                <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 text-xs text-slate-500 dark:text-slate-300 opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 pointer-events-none">
                   {method.label}
                 </span>
               </motion.a>
@@ -89,11 +89,11 @@ function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-base text-slate-700 dark:text-slate-200 font-medium flex items-center gap-2 justify-center"
+              className="text-base text-slate-700 dark:text-slate-100 font-medium flex items-center gap-2 justify-center"
             >
-              <FaEnvelope className="text-indigo-400 dark:text-yellow-400" />
-              <span className="font-semibold text-indigo-600 dark:text-yellow-400">kashinathkesale1@gmail.com</span>
-              <button onClick={() => handleCopy('kashinathkesale1@gmail.com', 'email')} className="ml-2 px-2 py-0.5 rounded bg-indigo-50 dark:bg-yellow-900 text-indigo-600 dark:text-yellow-400 text-xs font-semibold hover:bg-indigo-100 dark:hover:bg-yellow-800 transition-colors focus:outline-none">
+              <FaEnvelope className="text-indigo-400 dark:text-indigo-400" />
+              <span className="font-semibold text-indigo-600 dark:text-indigo-300">kashinathkesale1@gmail.com</span>
+              <button onClick={() => handleCopy('kashinathkesale1@gmail.com', 'email')} className="ml-2 px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-200 text-xs font-semibold hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors focus:outline-none">
                 {copied === 'email' ? 'Copied!' : 'Copy'}
               </button>
             </motion.p>
@@ -102,11 +102,11 @@ function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
-              className="text-base text-slate-700 dark:text-slate-200 font-medium flex items-center gap-2 justify-center"
+              className="text-base text-slate-700 dark:text-slate-100 font-medium flex items-center gap-2 justify-center"
             >
-              <FaPhone className="text-green-400 dark:text-yellow-400" />
-              <span className="font-semibold text-green-700 dark:text-yellow-400">+91 75071 86684</span>
-              <button onClick={() => handleCopy('+917507186684', 'phone')} className="ml-2 px-2 py-0.5 rounded bg-green-50 dark:bg-yellow-900 text-green-700 dark:text-yellow-400 text-xs font-semibold hover:bg-green-100 dark:hover:bg-yellow-800 transition-colors focus:outline-none">
+              <FaPhone className="text-green-400 dark:text-green-400" />
+              <span className="font-semibold text-green-700 dark:text-green-300">+91 75071 86684</span>
+              <button onClick={() => handleCopy('+917507186684', 'phone')} className="ml-2 px-2 py-0.5 rounded bg-green-50 dark:bg-green-900 text-green-700 dark:text-green-200 text-xs font-semibold hover:bg-green-100 dark:hover:bg-green-800 transition-colors focus:outline-none">
                 {copied === 'phone' ? 'Copied!' : 'Copy'}
               </button>
             </motion.p>
@@ -114,13 +114,13 @@ function Contact() {
         </div>
       </motion.div>
       <div className="w-full flex flex-col items-center mt-8">
-        <hr className="my-6 border-indigo-200 dark:border-yellow-400 w-1/4 mx-auto opacity-30" />
-        <p className="text-sm text-slate-500 dark:text-yellow-300 text-center">
+        <hr className="my-6 border-indigo-200 dark:border-indigo-500 w-1/4 mx-auto opacity-30" />
+        <p className="text-sm text-slate-500 dark:text-slate-300 text-center">
           Thank you for visiting my portfolio. Connect with me over socials.<br />
-          <span>Keep Rising. 🚀</span>
+          <span className="text-indigo-600 dark:text-yellow-400">Keep Rising. 🚀</span>
         </p>
-        <p className="text-sm text-slate-400 dark:text-yellow-400 flex justify-center items-center gap-1 mt-2">
-          Designed with <FaHeart className="text-red-500 dark:text-yellow-400 inline" /> by <span className="text-indigo-600 dark:text-yellow-400 font-semibold">Kashinath Kesale.</span>
+        <p className="text-sm text-slate-400 dark:text-slate-400 flex justify-center items-center gap-1 mt-2">
+          Designed with <FaHeart className="text-red-500 dark:text-yellow-400 inline" /> by <span className="text-indigo-600 dark:text-indigo-300 font-semibold">Kashinath Kesale.</span>
         </p>
       </div>
     </section>
