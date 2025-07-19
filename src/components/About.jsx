@@ -3,20 +3,18 @@ import { FaUser } from 'react-icons/fa';
 
 function About() {
   return (
-    <section id="about" className="py-20 px-6 bg-gray-100 dark:bg-slate-900 text-gray-800 dark:text-slate-100 transition-colors duration-500">
-      <div className="max-w-4xl mx-auto text-center">
-        {/* <h2 className="text-4xl font-bold text-orange-600 mb-6">About Me</h2> */}
-        <h2 className="text-3xl font-bold text-center text-indigo-600 dark:text-yellow-400 mb-10 flex items-center justify-center gap-2">
-          <FaUser className="text-gray-800 dark:text-yellow-400" />
+    <section id="about" className="py-12 px-6 bg-gray-100 dark:bg-slate-900 text-gray-800 dark:text-slate-100 transition-colors duration-500">
+      <div className="max-w-2xl mx-auto bg-white/90 dark:bg-slate-800/90 rounded-2xl shadow-lg border border-indigo-100 dark:border-slate-700 p-8 flex flex-col items-center transition-colors">
+        <h2 className="text-3xl font-bold text-center text-indigo-600 dark:text-yellow-400 mb-4 flex items-center gap-2">
+          <FaUser className="text-indigo-600 dark:text-yellow-400 text-2xl" />
           About Me
         </h2>
-
-
-        <p className="text-base text-slate-500 dark:text-slate-200">
-          Hello! I'm <span className="font-semibold text-orange-600 dark:text-yellow-400">Kashinath Kesale</span>, a passionate software developer with a strong foundation in the MERN stack and Data Structures & Algorithms (DSA). Currently pursuing a degree in Electronics and Telecommunication Engineering, I'm focused on mastering full-stack development and sharpening my problem-solving skills.
+        <hr className="w-16 border-indigo-200 dark:border-yellow-400 mb-6 opacity-40" />
+        <p className="text-base md:text-lg leading-relaxed text-slate-700 dark:text-slate-200 text-center font-medium">
+          Hello! I'm <span className="font-semibold text-orange-500 dark:text-yellow-400">Kashinath Kesale</span>, a passionate software developer with a strong foundation in the MERN stack and Data Structures & Algorithms (DSA). Currently pursuing a degree in Electronics and Telecommunication Engineering, I thrive on building efficient, scalable applications and solving real-world problems through code.
         </p>
-        <p className="text-base text-slate-500 dark:text-slate-200 mt-4">
-          I enjoy building efficient, scalable applications and tackling algorithmic challenges. With practical experience in React, Node.js, Express, and MongoDB, I'm driven by a passion for continuous learning and solving real-world problems through code.
+        <p className="text-base md:text-lg leading-relaxed text-slate-700 dark:text-slate-200 text-center font-medium mt-4">
+          Beyond my technical expertise, I am known for my strong communication skills, adaptability, and a collaborative spirit. I enjoy working in diverse teams, embracing new challenges, and continuously learning to stay ahead in the ever-evolving tech landscape. My approach is driven by professionalism, attention to detail, and a genuine enthusiasm for both technology and personal growth.
         </p>
       </div>
     </section>

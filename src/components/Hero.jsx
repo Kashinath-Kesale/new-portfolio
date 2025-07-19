@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaArrowDown, FaUser, FaEnvelope, FaDownload, FaCode } from 'react-icons/fa';
+import { FaArrowDown, FaEnvelope, FaDownload, FaCode } from 'react-icons/fa';
 
 function Hero() {
   const [showAbout, setShowAbout] = useState(false);
@@ -85,16 +85,43 @@ function Hero() {
               transition={{ duration: 0.5 }}
               className="w-full max-w-2xl mx-auto mt-8 bg-white/80 dark:bg-slate-800/90 rounded-2xl shadow-lg px-6 py-8 text-left text-gray-800 dark:text-slate-100 border border-gray-200 dark:border-slate-700 transition-colors duration-500"
             >
-              <h2 className="text-3xl font-bold text-center text-slate-800 dark:text-slate-100 mb-6 flex items-center justify-center gap-2">
-                <FaUser className="text-indigo-600 dark:text-yellow-400" />
-                About Me
-              </h2>
-              <p className="text-lg leading-relaxed">
-                Hello! I'm <span className="font-semibold text-indigo-600 dark:text-yellow-400">Kashinath Kesale</span>, a final-year engineering student and passionate software developer with a strong foundation in full-stack development and Data Structures & Algorithms.
-              </p>
-              <p className="text-lg leading-relaxed mt-4">
-                I enjoy building efficient, scalable applications and solving real-world problems through code using technologies like React, Node.js, Express, and MongoDB. I'm driven by continuous learning, clean architecture, and impactful solutions.
-              </p>
+              <div className="flex flex-col items-center text-center">
+                <p className="text-base md:text-lg leading-relaxed text-slate-700 dark:text-slate-200 font-medium mb-6">
+                  Hello! I'm <span className="font-semibold text-orange-500 dark:text-yellow-400">Kashinath Kesale</span> — a developer who codes with purpose and passion.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-xl">
+                  <div className="bg-indigo-50 dark:bg-slate-800/70 rounded-xl p-4 flex items-center gap-3 shadow border border-indigo-100 dark:border-slate-700 transition-transform transition-shadow duration-300 hover:scale-105 hover:shadow-lg">
+                    <span className="text-left">
+                      <span className="font-bold text-indigo-600 dark:text-yellow-400">Impact-Driven:</span> I build scalable, real-world solutions that matter.
+                    </span>
+                  </div>
+                  <div className="bg-indigo-50 dark:bg-slate-800/70 rounded-xl p-4 flex items-center gap-3 shadow border border-indigo-100 dark:border-slate-700 transition-transform transition-shadow duration-300 hover:scale-105 hover:shadow-lg">
+                    <span className="text-left">
+                      <span className="font-bold text-indigo-600 dark:text-yellow-400">Collaborative:</span> I thrive in diverse teams and love sharing ideas.
+                    </span>
+                  </div>
+                  <div className="bg-indigo-50 dark:bg-slate-800/70 rounded-xl p-4 flex items-center gap-3 shadow border border-indigo-100 dark:border-slate-700 transition-transform transition-shadow duration-300 hover:scale-105 hover:shadow-lg">
+                    <span className="text-left">
+                      <span className="font-bold text-indigo-600 dark:text-yellow-400">Curious & Fast Learner:</span> I embrace new tech and adapt quickly.
+                    </span>
+                  </div>
+                  <div className="bg-indigo-50 dark:bg-slate-800/70 rounded-xl p-4 flex items-center gap-3 shadow border border-indigo-100 dark:border-slate-700 transition-transform transition-shadow duration-300 hover:scale-105 hover:shadow-lg">
+                    <span className="text-left">
+                      <span className="font-bold text-indigo-600 dark:text-yellow-400">Communicator:</span> I value clarity and enjoy making complex ideas simple.
+                    </span>
+                  </div>
+                  <div className="bg-indigo-50 dark:bg-slate-800/70 rounded-xl p-4 flex items-center gap-3 shadow border border-indigo-100 dark:border-slate-700 transition-transform transition-shadow duration-300 hover:scale-105 hover:shadow-lg">
+                    <span className="text-left">
+                      <span className="font-bold text-indigo-600 dark:text-yellow-400">Professional:</span> I deliver quality with integrity and attention to detail.
+                    </span>
+                  </div>
+                  <div className="bg-indigo-50 dark:bg-slate-800/70 rounded-xl p-4 flex items-center gap-3 shadow border border-indigo-100 dark:border-slate-700 transition-transform transition-shadow duration-300 hover:scale-105 hover:shadow-lg">
+                    <span className="text-left">
+                      <span className="font-bold text-indigo-600 dark:text-yellow-400">Growth-Minded:</span> I’m always learning, both as a developer and as a person.
+                    </span>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
