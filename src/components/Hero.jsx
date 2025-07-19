@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaArrowDown, FaUser } from 'react-icons/fa';
+import { FaArrowDown, FaUser, FaEnvelope, FaDownload, FaCode } from 'react-icons/fa';
 
 function Hero() {
   const [showAbout, setShowAbout] = useState(false);
 
   return (
-    <section className="relative text-center py-12 md:py-20 bg-gradient-to-br from-indigo-50 via-white to-blue-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden" id="home">
+    <section className="relative text-center py-12 md:py-20 overflow-hidden w-full" id="home">
       {/* Animated Blurred Gradient Background */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -108,24 +108,24 @@ function Hero() {
         >
           <a
             href="mailto:kashinathkesale1@gmail.com"
-            className="px-6 py-2 rounded-full bg-indigo-600 text-white font-semibold shadow-md hover:bg-indigo-700 transition-colors"
+            className="px-6 py-2 rounded-full bg-indigo-600 text-white font-semibold shadow-md hover:bg-indigo-700 hover:scale-105 hover:shadow-lg hover:ring-2 hover:ring-indigo-400 transition-all duration-300 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
           >
-            Hire Me
+            <FaEnvelope className="text-lg" /> Hire Me
           </a>
           <a
             href="/Kashinath_SDE_Resume.pdf"
             download
-            className="px-6 py-2 rounded-full bg-white text-indigo-700 font-semibold border border-indigo-200 shadow-md hover:bg-indigo-50 transition-colors"
+            className="px-6 py-2 rounded-full bg-white text-indigo-700 font-semibold border border-indigo-200 shadow-md hover:bg-indigo-50 hover:scale-105 hover:shadow-lg hover:ring-2 hover:ring-indigo-400 transition-all duration-300 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
           >
-            Download Resume
+            <FaDownload className="text-lg" /> Resume
           </a>
           <a
             href="https://leetcode.com/u/Kashinath_Kesale/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-2 rounded-full bg-slate-200 text-slate-700 font-semibold shadow-md hover:bg-slate-300 transition-colors"
+            className="px-6 py-2 rounded-full bg-slate-200 text-slate-700 font-semibold shadow-md hover:bg-slate-300 hover:scale-105 hover:shadow-lg hover:ring-2 hover:ring-yellow-400 transition-all duration-300 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
           >
-            LeetCode Profile
+            <FaCode className="text-lg" /> LeetCode
           </a>
         </motion.div>
       </div>

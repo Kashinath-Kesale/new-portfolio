@@ -40,8 +40,8 @@ function Education() {
             whileHover={{ scale: 1.04, boxShadow: '0 8px 32px 0 rgba(49,70,178,0.13), 0 2px 8px 0 rgba(49,70,178,0.10)' }}
             className="bg-white/90 dark:bg-slate-800/90 border border-indigo-100 dark:border-slate-700 rounded-2xl shadow-lg p-6 w-full flex flex-col items-center transition-transform duration-300 transition-colors"
           >
-            <h3 className="text-xl font-semibold text-indigo-700 dark:text-yellow-300 text-center mb-2">{edu.degree}</h3>
-            <p className="text-slate-700 dark:text-slate-200 text-center mb-1">{edu.university}</p>
+            <h3 className="text-xl font-semibold text-indigo-700 dark:text-indigo-300 text-center mb-2">{edu.degree}</h3>
+            <p className="text-slate-700 dark:text-slate-100 text-center mb-1">{edu.university}</p>
             <p className="text-indigo-500 dark:text-yellow-400 text-sm text-center">{edu.duration}</p>
           </motion.div>
         ))}

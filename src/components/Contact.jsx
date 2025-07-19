@@ -120,7 +120,7 @@ function Contact() {
           <span className="text-indigo-600 dark:text-yellow-400">Keep Rising. 🚀</span>
         </p>
         <p className="text-sm text-slate-400 dark:text-slate-400 flex justify-center items-center gap-1 mt-2">
-          Designed with <FaHeart className="text-red-500 dark:text-yellow-400 inline" /> by <span className="text-indigo-600 dark:text-indigo-300 font-semibold">Kashinath Kesale.</span>
+          Designed with <FaHeart className="text-red-500 dark:text-red-400 inline" /> by <span className="text-indigo-600 dark:text-indigo-300 font-semibold">Kashinath Kesale.</span>
         </p>
       </div>
     </section>

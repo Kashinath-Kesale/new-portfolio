@@ -71,12 +71,12 @@ function Projects() {
             <div className="flex-1 flex flex-col items-center justify-between p-6 w-full">
               <div className="w-full flex flex-col items-center">
                 <div className="flex items-center gap-2 mb-2">
-                  <h3 className="text-2xl font-bold text-indigo-700 dark:text-yellow-300 group-hover:text-indigo-800 dark:group-hover:text-yellow-400 transition-colors text-center">
+                  <h3 className="text-2xl font-bold text-indigo-700 dark:text-indigo-300 group-hover:text-indigo-800 dark:group-hover:text-yellow-400 transition-colors text-center">
                     {proj.title}
                   </h3>
-                  <FaExternalLinkAlt className="text-indigo-400 dark:text-yellow-400 text-base ml-1 group-hover:text-indigo-600 dark:group-hover:text-yellow-300 transition-colors" />
+                  <FaExternalLinkAlt className="text-indigo-400 dark:text-indigo-400 text-base ml-1 group-hover:text-indigo-600 dark:group-hover:text-yellow-300 transition-colors" />
                 </div>
-                <p className="text-slate-700 dark:text-slate-200 mb-4 text-base leading-relaxed text-center">
+                <p className="text-slate-700 dark:text-slate-100 mb-4 text-base leading-relaxed text-center">
                   {proj.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mt-2 justify-center">
@@ -87,7 +87,7 @@ function Projects() {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3, delay: idx * 0.07 }}
                       viewport={{ once: true }}
-                      className="px-3 py-1 rounded-full bg-indigo-50 dark:bg-slate-700 text-indigo-700 dark:text-yellow-300 text-xs font-semibold shadow hover:bg-indigo-100 dark:hover:bg-yellow-900 transition-colors"
+                      className="px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-200 text-xs font-semibold shadow hover:bg-indigo-100 dark:hover:bg-yellow-900 transition-colors"
                     >
                       {tech}
                     </motion.span>
