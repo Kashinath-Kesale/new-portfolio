@@ -50,10 +50,10 @@ function Hero() {
           transition={{ duration: 1 }}
           className="text-lg md:text-2xl mt-2 text-slate-600 dark:text-slate-300 font-medium transition-colors duration-500"
         >
-          I'm a{' '}
+          I'm {' '}
           <span className="text-indigo-600 dark:text-yellow-400 font-semibold transition-colors duration-500">
             <Typewriter
-              words={['Software Developer', 'MERN Stack Developer', 'DSA & Problem Solving Enthusiast', 'Open to Internships & Full-Time Roles']}
+              words={['a Software Developer', 'a MERN Stack Developer', 'a DSA & Problem Solving Enthusiast', 'Open to Internships & Full-Time Roles']}
               loop={0}
               cursor
               cursorStyle="|"
