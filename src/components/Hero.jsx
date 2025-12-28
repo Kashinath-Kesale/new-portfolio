@@ -28,8 +28,7 @@ function Hero() {
           transition={{ duration: 0.8 }}
           className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-400/10 border border-yellow-400/30 text-yellow-700 dark:text-yellow-400 text-xs font-bold uppercase tracking-widest mb-2 shadow-sm backdrop-blur-sm"
         >
-          <FaRocket /> 614 Solved | 365 Days Streak Badge | 1488 Rating
-        </motion.div>
+        <FaRocket /> LeetCode: 614 Solved | 365 Days Streak | 1488 Rating        </motion.div>
 
         {/* Animated Name */}
         <motion.h1
@@ -53,7 +52,7 @@ function Hero() {
             <Typewriter
               words={[
                 'a Full Stack Developer', 
-                'a NestJS & TypeScript Specialist', 
+                'Proficient in NestJS & TypeScript', 
                 'an Ex-Intern @ GoBasera', 
                 'a DSA Enthusiast (600+ Solved)'
               ]}
