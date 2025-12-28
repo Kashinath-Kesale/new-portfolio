@@ -1,8 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaPlaneDeparture, FaServer, FaTasks, FaExternalLinkAlt, FaStore } from 'react-icons/fa';
+import { FaPlaneDeparture, FaServer, FaTasks, FaExternalLinkAlt, FaStore, FaRobot } from 'react-icons/fa';
 
 const projects = [
+  {
+    title: 'CodeGuardian – AI-Powered Code Reviewer',
+    tech: ['React.js', 'Node.js', 'Express.js', 'Gemini API', 'Markdown'],
+    description:
+      'Engineered a full-stack application with a responsive React UI and a Node.js/Express RESTful API to provide developers with real-time, AI-driven code analysis. Integrated the Google Gemini API, crafting advanced system prompts to deliver structured Markdown feedback, which improved the relevance of suggestions by 40%.',
+    link: 'https://github.com/Kashinath-Kesale/CodeGuardian',
+    icon: <FaRobot className="text-4xl text-indigo-500" />,
+  },
   {
     title: 'RetailEdge – Retail Management Platform',
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Chart.js'],
@@ -53,7 +61,6 @@ function Projects() {
             viewport={{ once: true }}
             className="group bg-white/90 dark:bg-slate-800/90 border border-indigo-100 dark:border-slate-700 rounded-2xl shadow-lg p-0 flex flex-col items-center overflow-hidden transition-transform duration-300 hover:shadow-indigo-200/60 dark:hover:shadow-yellow-200/20 hover:border-indigo-300 dark:hover:border-yellow-400 relative transition-colors"
           >
-            {/* Project Icon with tooltip */}
             <div className="flex items-center justify-center mt-6 mb-2 relative">
               <div className="bg-white/80 dark:bg-slate-900/80 rounded-full p-3 shadow group-hover:shadow-indigo-200/60 dark:group-hover:shadow-yellow-200/20 relative transition-colors">
                 <span className="group relative">
@@ -67,7 +74,7 @@ function Projects() {
                 <span className="absolute -top-2 -right-2 bg-gradient-to-r from-indigo-500 to-blue-400 dark:from-yellow-400 dark:to-yellow-300 text-white text-xs font-bold px-2 py-0.5 rounded-full shadow">New</span>
               )}
             </div>
-            {/* Project Content */}
+            
             <div className="flex-1 flex flex-col items-center justify-between p-6 w-full">
               <div className="w-full flex flex-col items-center">
                 <div className="flex items-center gap-2 mb-2">
