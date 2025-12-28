@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaArrowDown, FaEnvelope, FaDownload, FaCode } from 'react-icons/fa';
+import { FaArrowDown, FaEnvelope, FaDownload, FaCode, FaRocket } from 'react-icons/fa';
 
 function Hero() {
   const [showAbout, setShowAbout] = useState(false);
 
   return (
     <section className="relative text-center py-12 md:py-20 overflow-hidden w-full" id="home">
-      {/* Animated Blurred Gradient Background */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -21,17 +20,16 @@ function Hero() {
       </motion.div>
 
       <div className="relative flex flex-col items-center gap-4 z-10">
-        {/* Animated Profile Image */}
-        {/**
-        <motion.img
-          src="/profile.jpg"
-          alt="Kashinath Kesale"
-          className="w-36 h-36 md:w-44 md:h-44 rounded-full border-4 border-indigo-400 shadow-xl object-cover bg-white"
-          initial={{ opacity: 0, scale: 0.8 }}
+        
+        {/* Added: High-Impact LeetCode Badge */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-        />
-        */}
+          transition={{ duration: 0.8 }}
+          className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-400/10 border border-yellow-400/30 text-yellow-700 dark:text-yellow-400 text-xs font-bold uppercase tracking-widest mb-2 shadow-sm backdrop-blur-sm"
+        >
+          <FaRocket /> 614 Solved | 365 Days Streak Badge | 1488 Rating
+        </motion.div>
 
         {/* Animated Name */}
         <motion.h1
@@ -43,7 +41,7 @@ function Hero() {
           Kashinath Kesale
         </motion.h1>
 
-        {/* Tagline with Typewriter effect */}
+        {/* Updated Tagline with Professional Typewriter effect */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,13 +51,18 @@ function Hero() {
           I'm {' '}
           <span className="text-indigo-600 dark:text-yellow-400 font-semibold transition-colors duration-500">
             <Typewriter
-              words={['a Software Developer', 'a MERN Stack Developer', 'a DSA & Problem Solving Enthusiast', 'Open to Internships & Full-Time Roles']}
+              words={[
+                'a Full Stack Developer', 
+                'a NestJS & TypeScript Specialist', 
+                'an Ex-Intern @ GoBasera', 
+                'a DSA Enthusiast (600+ Solved)'
+              ]}
               loop={0}
               cursor
               cursorStyle="|"
               typeSpeed={70}
               deleteSpeed={40}
-              delaySpeed={1000}
+              delaySpeed={1500}
             />
           </span>
         </motion.p>
@@ -87,7 +90,7 @@ function Hero() {
             >
               <div className="flex flex-col items-center text-center">
                 <p className="text-base md:text-lg leading-relaxed text-slate-700 dark:text-slate-200 font-medium mb-6">
-                  Hello! I'm <span className="font-semibold text-orange-500 dark:text-yellow-400">Kashinath Kesale</span> — a developer who codes with purpose and passion.
+                  Hello! I'm <span className="font-semibold text-indigo-600 dark:text-yellow-400">Kashinath Kesale</span> — a developer who codes with purpose and passion.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-xl">
                   <div className="bg-indigo-50 dark:bg-slate-800/70 rounded-xl p-4 flex items-center gap-3 shadow border border-indigo-100 dark:border-slate-700 transition-transform transition-shadow duration-300 hover:scale-105 hover:shadow-lg">
