@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaJava, FaPython, FaReact, FaNodeJs, FaGitAlt, FaHtml5, FaCss3Alt, FaDatabase, FaTools, FaCogs, FaCodeBranch } from 'react-icons/fa';
-import { SiJavascript, SiMongodb, SiMysql, SiPostman, SiDocker, SiVercel } from 'react-icons/si';
+import { FaJava, FaPython, FaReact, FaNodeJs, FaGitAlt, FaDatabase, FaTools, FaCogs, FaCodeBranch } from 'react-icons/fa';
+import { SiJavascript, SiMongodb, SiMysql, SiPostman, SiDocker, SiVercel, SiTypescript, SiNestjs, SiNextdotjs, SiPostgresql } from 'react-icons/si';
 import { MdOutlineApi } from 'react-icons/md';
 
 const skillGroups = [
@@ -10,6 +10,7 @@ const skillGroups = [
     icon: <FaCodeBranch className="text-indigo-500 text-2xl" />,
     skills: [
       { name: 'Java', icon: <FaJava className="text-3xl text-indigo-600" /> },
+      { name: 'TypeScript', icon: <SiTypescript className="text-3xl text-blue-600" /> }, // Added
       { name: 'JavaScript', icon: <SiJavascript className="text-3xl text-yellow-400" /> },
       { name: 'Python', icon: <FaPython className="text-3xl text-blue-400" /> },
     ],
@@ -18,12 +19,12 @@ const skillGroups = [
     title: 'Frontend & Backend Development',
     icon: <MdOutlineApi className="text-indigo-500 text-2xl" />,
     skills: [
+      { name: 'Next.js', icon: <SiNextdotjs className="text-3xl text-black dark:text-white" /> }, // Added
       { name: 'React.js', icon: <FaReact className="text-3xl text-blue-500" /> },
+      { name: 'Nest.js', icon: <SiNestjs className="text-3xl text-red-600" /> }, // Added
       { name: 'Node.js', icon: <FaNodeJs className="text-3xl text-green-500" /> },
       { name: 'Express.js', icon: <FaNodeJs className="text-3xl text-gray-700" /> },
       { name: 'MongoDB', icon: <SiMongodb className="text-3xl text-green-600" /> },
-      { name: 'HTML', icon: <FaHtml5 className="text-3xl text-orange-500" /> },
-      { name: 'CSS', icon: <FaCss3Alt className="text-3xl text-blue-400" /> },
       { name: 'REST APIs', icon: <MdOutlineApi className="text-3xl text-indigo-400" /> },
     ],
   },
@@ -31,43 +32,41 @@ const skillGroups = [
     title: 'Databases',
     icon: <FaDatabase className="text-indigo-500 text-2xl" />,
     skills: [
+      { name: 'PostgreSQL', icon: <SiPostgresql className="text-3xl text-blue-400" /> }, // Added from Resume
       { name: 'MongoDB', icon: <SiMongodb className="text-3xl text-green-600" /> },
       { name: 'MySQL', icon: <SiMysql className="text-3xl text-blue-400" /> },
-      { name: 'SQL', icon: <FaDatabase className="text-3xl text-indigo-400" /> },
     ],
   },
   {
     title: 'Tools & Platforms',
     icon: <FaTools className="text-indigo-500 text-2xl" />,
     skills: [
-      { name: 'Git', icon: <FaGitAlt className="text-3xl text-orange-400" /> },
-      { name: 'GitHub', icon: <FaGitAlt className="text-3xl text-black" /> },
       { name: 'Docker', icon: <SiDocker className="text-3xl text-blue-500" /> },
-      { name: 'Postman', icon: <SiPostman className="text-3xl text-orange-500" /> },
-      { name: 'VS Code', icon: <FaCogs className="text-3xl text-indigo-400" /> },
+      { name: 'Git', icon: <FaGitAlt className="text-3xl text-orange-400" /> },
       { name: 'GitHub Actions', icon: <FaCodeBranch className="text-3xl text-indigo-500" /> },
-      { name: 'CI/CD', icon: <SiVercel className="text-3xl text-black" /> },
+      { name: 'Postman', icon: <SiPostman className="text-3xl text-orange-500" /> },
+      { name: 'CI/CD', icon: <SiVercel className="text-3xl text-black dark:text-white" /> },
     ],
   },
   {
     title: 'Computer Science Fundamentals',
     icon: <FaCogs className="text-indigo-500 text-2xl" />,
     skills: [
-      { name: 'Data Structures & Algorithms', icon: <FaCogs className="text-3xl text-indigo-600" /> },
+      { name: 'DSA', icon: <FaCogs className="text-3xl text-indigo-600" /> },
       { name: 'OOP', icon: <FaCogs className="text-3xl text-indigo-400" /> },
       { name: 'DBMS', icon: <FaDatabase className="text-3xl text-indigo-400" /> },
       { name: 'OS', icon: <FaCogs className="text-3xl text-indigo-400" /> },
-      { name: 'Computer Networks', icon: <FaCogs className="text-3xl text-indigo-400" /> },
+      { name: 'Networks', icon: <FaCogs className="text-3xl text-indigo-400" /> },
     ],
   },
 ];
 
 function Skills() {
   return (
-    <section id="skills" className="bg-gradient-to-br from-indigo-50 via-white to-blue-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 text-slate-800 dark:text-slate-100 py-8 px-4 sm:px-6 md:px-8 transition-colors duration-500">
+    <section id="skills" className="bg-gradient-to-br from-indigo-50 via-white to-blue-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 text-slate-800 dark:text-slate-100 py-12 px-4 sm:px-6 md:px-8 transition-colors duration-500">
       <h2 className="text-3xl font-bold text-center text-indigo-600 dark:text-yellow-400 mb-8 flex items-center justify-center gap-2">
         <FaCogs className="text-indigo-600 dark:text-yellow-400" />
-        Skills
+        Technical Skills
       </h2>
       <div className="w-full flex flex-col md:flex-row flex-wrap justify-center gap-6 items-start">
         {skillGroups.map((group, i) => (
@@ -77,7 +76,7 @@ function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: i * 0.15 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-white via-indigo-50 to-blue-50 dark:from-slate-800 dark:via-slate-900 dark:to-slate-900 border border-indigo-100 dark:border-slate-700 rounded-2xl shadow-lg p-6 min-w-[260px] max-w-xs w-full sm:w-auto md:w-80 flex-1 flex flex-col items-center hover:-rotate-1 hover:scale-105 hover:shadow-indigo-200/60 dark:hover:shadow-yellow-200/20 transition-transform duration-300 mx-auto transition-colors"
+            className="bg-gradient-to-br from-white via-indigo-50 to-blue-50 dark:from-slate-800 dark:via-slate-900 dark:to-slate-900 border border-indigo-100 dark:border-slate-700 rounded-2xl shadow-lg p-6 min-w-[260px] max-w-xs w-full sm:w-auto md:w-80 flex-1 flex flex-col items-center hover:-rotate-1 hover:scale-105 hover:shadow-indigo-200/60 dark:hover:shadow-yellow-200/20 transition-all duration-300 mx-auto transition-colors"
           >
             <div className="flex items-center gap-2 mb-4">
               {group.icon}
