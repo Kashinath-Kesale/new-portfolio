@@ -140,7 +140,7 @@ function Hero() {
             <FaEnvelope className="text-lg" /> Hire Me
           </a>
           <a
-            href="/Kashinath_SDE_Resume.pdf"
+            href="/Kashinath_Kesale_Resume.pdf"
             download
             className="px-6 py-2 rounded-full bg-white text-indigo-700 font-semibold border border-indigo-200 shadow-md hover:bg-indigo-50 hover:scale-105 hover:shadow-lg hover:ring-2 hover:ring-indigo-400 transition-all duration-300 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
           >
