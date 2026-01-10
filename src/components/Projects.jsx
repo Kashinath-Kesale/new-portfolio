@@ -1,8 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaPlaneDeparture, FaServer, FaTasks, FaExternalLinkAlt, FaStore, FaRobot } from 'react-icons/fa';
+import { FaPlaneDeparture, FaServer, FaTasks, FaExternalLinkAlt, FaStore, FaRobot, FaChartBar } from 'react-icons/fa';
 
 const projects = [
+  {
+    title: 'Resilient Real-Time Live Polling System',
+    tech: ['Socket.io', 'React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+    description:
+      'Built a real-time multi-user polling system with server-synchronized timers, live vote aggregation, and state recovery across refreshes and late joins. Prevented race conditions and duplicate voting using server-side validation and database-level constraints.',
+    link: 'https://github.com/Kashinath-Kesale/intervue-live-poll',
+    icon: <FaChartBar className="text-4xl text-indigo-500" />,
+  },
   {
     title: 'CodeGuardian – AI-Powered Code Reviewer',
     tech: ['React.js', 'Node.js', 'Express.js', 'Gemini API', 'Markdown'],
@@ -15,7 +23,7 @@ const projects = [
     title: 'RetailEdge – Retail Management Platform',
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Chart.js'],
     description:
-      'Designed and built a scalable full-stack retail management system with secure authentication, role-based access control (Admin, Cashier, Viewer), and real-time inventory tracking. Developed RESTful APIs with JWT authentication and efficient state management; implemented token refresh, sales processing, and PDF receipt generation. Engineered an interactive React.js dashboard with Tailwind CSS and Chart.js for advanced analytics (revenue, sales trends, top products).',
+      'Designed and built a scalable full-stack retail management system with secure authentication, role-based access control (Admin, Cashier, Viewer), and real-time inventory tracking. Developed RESTful APIs with JWT authentication and efficient state management; implemented token refresh, sales processing, and PDF receipt generation. Engineered an interactive React.js dashboard with Tailwind CSS and Chart.js for advanced analytics.',
     link: 'https://github.com/Kashinath-Kesale/RetailEdge',
     icon: <FaStore className="text-4xl text-indigo-500" />,
   },
@@ -70,6 +78,7 @@ function Projects() {
                   </span>
                 </span>
               </div>
+              {/* The "New" tag will automatically apply to the first item (Live Polling System) */}
               {i === 0 && (
                 <span className="absolute -top-2 -right-2 bg-gradient-to-r from-indigo-500 to-blue-400 dark:from-yellow-400 dark:to-yellow-300 text-white text-xs font-bold px-2 py-0.5 rounded-full shadow">New</span>
               )}

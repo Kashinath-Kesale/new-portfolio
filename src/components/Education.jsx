@@ -7,7 +7,7 @@ const timelineData = [
     type: 'experience',
     title: "Software Engineering Intern (Founder's Office)",
     organization: 'GoBasera',
-    duration: 'Oct 2025 – Nov 2025',
+    duration: 'Oct 2025 – Dec 2025',
     description: [
       'Built full-stack features for a multi-service SaaS platform using NestJS, TypeScript, React, and PostgreSQL within a monorepo architecture.',
       'Collaborated with the CEO to deliver production-grade releases with >80% test coverage via GitHub Actions CI/CD pipelines.',

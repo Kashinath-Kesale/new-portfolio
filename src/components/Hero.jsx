@@ -28,7 +28,7 @@ function Hero() {
           transition={{ duration: 0.8 }}
           className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-400/10 border border-yellow-400/30 text-yellow-700 dark:text-yellow-400 text-xs font-bold uppercase tracking-widest mb-2 shadow-sm backdrop-blur-sm"
         >
-        <FaRocket /> LeetCode: 600+ Solved | 365 Days Streak | 1488 Rating        </motion.div>
+        <FaRocket /> LeetCode: 500+ Solved | 365+ Days Streak | 1500+ Rating        </motion.div>
 
         {/* Animated Name */}
         <motion.h1
@@ -51,7 +51,7 @@ function Hero() {
           <span className="text-indigo-600 dark:text-yellow-400 font-semibold transition-colors duration-500">
             <Typewriter
               words={[
-                'a Full Stack Developer', 
+                'a Software Developer', 
                 'Proficient in NestJS & TypeScript', 
                 'an Ex-Intern @ GoBasera', 
                 'a DSA Enthusiast (600+ Solved)'
