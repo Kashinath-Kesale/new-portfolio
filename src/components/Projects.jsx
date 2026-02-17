@@ -1,8 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaPlaneDeparture, FaServer, FaTasks, FaExternalLinkAlt, FaStore, FaRobot, FaChartBar } from 'react-icons/fa';
+import { FaServer, FaTasks, FaExternalLinkAlt, FaStore, FaRobot, FaChartBar, FaWallet } from 'react-icons/fa';
 
 const projects = [
+  {
+    title: 'PayFlowX – Transactional Payment System',
+    tech: ['NestJS', 'TypeScript', 'PostgreSQL', 'Prisma', 'Structured Logging'],
+    description:
+      'Built a transactional payment engine with database-level idempotency and ACID-compliant operations to ensure safe retries and prevent duplicate charges. Designed an asynchronous settlement workflow with a one-to-one Payment–Settlement model and implemented a reconciliation module to audit ledger consistency. Optimized query performance using indexed high-cardinality fields.',
+    link: 'https://github.com/Kashinath-Kesale/PayFlowX',
+    icon: <FaWallet className="text-4xl text-indigo-500" />,
+  },
   {
     title: 'Resilient Real-Time Live Polling System',
     tech: ['Socket.io', 'React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
@@ -23,7 +31,7 @@ const projects = [
     title: 'RetailEdge – Retail Management Platform',
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Chart.js'],
     description:
-      'Designed and built a scalable full-stack retail management system with secure authentication, role-based access control (Admin, Cashier, Viewer), and real-time inventory tracking. Developed RESTful APIs with JWT authentication and efficient state management; implemented token refresh, sales processing, and PDF receipt generation. Engineered an interactive React.js dashboard with Tailwind CSS and Chart.js for advanced analytics.',
+      'Designed and built a scalable full-stack retail management system with secure authentication, role-based access control (Admin, Cashier, Viewer), and real-time inventory tracking. Developed RESTful APIs with JWT authentication and efficient state management; implemented token refresh, sales processing, and PDF receipt generation.',
     link: 'https://github.com/Kashinath-Kesale/RetailEdge',
     icon: <FaStore className="text-4xl text-indigo-500" />,
   },
@@ -35,15 +43,6 @@ const projects = [
     link: 'https://github.com/Kashinath-Kesale/log-monitoring',
     icon: <FaServer className="text-4xl text-indigo-400" />,
     image: '/preview2.png',
-  },
-  {
-    title: 'SkyFlights',
-    tech: ['Python', 'Machine Learning', 'Flask'],
-    description:
-      'A machine learning-powered flight fare prediction system that estimates airline ticket prices using features like airline, route, stops, and travel duration. Built with Python and Flask, and deployed with an intuitive web interface for real-time predictions.',
-    link: 'https://github.com/Kashinath-Kesale/Flight-Price-Prediction---Data-Science',
-    icon: <FaPlaneDeparture className="text-4xl text-indigo-400" />,
-    image: '/preview.png',
   },
 ];
 
@@ -78,7 +77,6 @@ function Projects() {
                   </span>
                 </span>
               </div>
-              {/* The "New" tag will automatically apply to the first item (Live Polling System) */}
               {i === 0 && (
                 <span className="absolute -top-2 -right-2 bg-gradient-to-r from-indigo-500 to-blue-400 dark:from-yellow-400 dark:to-yellow-300 text-white text-xs font-bold px-2 py-0.5 rounded-full shadow">New</span>
               )}
