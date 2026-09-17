@@ -3,13 +3,16 @@
 @tailwind utilities;
 
 html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
   transition: background 0.4s, color 0.4s;
 }
 body {
+  overflow-x: hidden;
   @apply bg-white text-slate-800 transition-colors duration-500;
 }
 .dark body {
-  @apply bg-slate-900 text-slate-100 transition-colors duration-500;
+  @apply bg-zinc-950 text-zinc-100 transition-colors duration-500;
 }
 
 section {

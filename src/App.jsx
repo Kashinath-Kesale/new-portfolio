@@ -11,13 +11,14 @@ function App() {
   // Track which section is visible
   const [visibleSection, setVisibleSection] = useState('home');
 
-  // Dark mode state
+  // Dark mode state (defaults to true for sleek dark theme)
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window !== 'undefined') {
       const stored = localStorage.getItem('theme');
-      return stored === 'dark'; // default to false (light mode) if nothing stored
+      if (stored) return stored === 'dark';
+      return true; // Default to dark mode on first visit
     }
-    return false;
+    return true;
   });
 
   useEffect(() => {
@@ -37,7 +38,7 @@ function App() {
   const toggleDarkMode = () => setDarkMode((prev) => !prev);
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-blue-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <div className="min-h-screen w-full bg-gradient-to-br from-slate-50 via-indigo-50/25 to-sky-50/35 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950 transition-colors duration-500">
       <Header onNavigate={handleNav} darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <main className="pt-0">
         {visibleSection === 'home' && <Hero />}

@@ -1,6 +1,6 @@
-# 🧰 PortFolio | Kashinath Kesale
+# 🚀 Kashinath Kesale — Modern Developer Portfolio
 
-This is a fully responsive personal portfolio website built using **React.js** and **Tailwind CSS**, deployed on **Vercel**. It showcases my profile, skills, education, projects, and contact information in a modern and elegant design.
+A sleek, responsive, high-performance personal portfolio website built with **React.js**, **Tailwind CSS**, and **Framer Motion**. Features an Obsidian Zinc & Sky Cyan dark theme, frosted glass light mode, micro-interactions, ambient glow animations, and full responsiveness.
 
 ### 🔗 Live Site  
 **🌐** [kashinath-kesale-portfolio.vercel.app](https://kashinath-kesale-portfolio.vercel.app)
@@ -9,50 +9,58 @@ This is a fully responsive personal portfolio website built using **React.js** a
 
 ## 📸 Preview
 
-<img width="1919" height="824" alt="Screenshot 2025-06-25 145409" src="https://github.com/user-attachments/assets/0dda29e8-2919-4752-aa05-5872b7a08fd4" />
-<img width="1901" height="899" alt="Screenshot 2025-06-25 145644" src="https://github.com/user-attachments/assets/379672de-5776-471b-88fc-5163638e1064" />
-
+<img width="1919" height="824" alt="Portfolio Preview" src="https://github.com/user-attachments/assets/0dda29e8-2919-4752-aa05-5872b7a08fd4" />
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-- ✨ Fully responsive for mobile, tablet, and desktop
-- ⚡ Smooth scroll navigation using `react-scroll`
-- 🎨 Tailwind CSS for fast and clean UI development
-- 🔄 Sticky header and scroll animations
-- 📱 Mobile menu with hamburger toggle
-- 📁 Organized project showcase section
-- 📬 Contact section
+- 🌓 **Obsidian Zinc Dark & Frosted Milk Glass Light Modes**: High-contrast, modern aesthetics with persistent localStorage preference and zero flash-on-load.
+- ✨ **Framer Motion Micro-Interactions**: Ambient gradient glow meshes, smooth section transitions, and interactive hover effects.
+- 📱 **100% Responsive & Cross-Device Optimized**: Seamless experience across mobile devices, tablets, laptops, and ultra-wide screens.
+- 💼 **Production-Grade Project Showcases**: Architectural breakdown, tech badges, and direct links to repositories and live systems.
+- ⚡ **Interactive Contact & Quick-Copy**: One-click clipboard copy for email & phone with visual feedback and authentic brand hover animations.
+- 📄 **Interactive Resume Viewer & Download**: Easy access to the latest resume directly from the hero header.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React.js, Tailwind CSS
-- **Routing & Scroll:** react-scroll
+- **Frontend Core:** React.js 19, JavaScript (ES6+), HTML5, CSS3
+- **Styling & UI:** Tailwind CSS, Framer Motion, React Icons
+- **Typewriter Effect:** react-simple-typewriter
+- **Navigation & Scrolling:** react-scroll
 - **Deployment:** Vercel
-- **Version Control:** Git + GitHub
 
 ---
 
-## 📦 Installation
+## 📦 Installation & Local Setup
 
 ```bash
+# Clone the repository
 git clone https://github.com/Kashinath-Kesale/new-portfolio.git
+
+# Navigate to project directory
 cd new-portfolio
+
+# Install dependencies
 npm install
+
+# Start development server
 npm start
 ```
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ---
 
 ## 👨‍💻 Author
 
 **Kashinath Kesale**  
-📧 Email: [kashinathkesale1@gmail.com]  
-🔗 GitHub: [https://github.com/Kashinath-Kesale](https://github.com/Kashinath-Kesale)  
-🌐 Portfolio: [kashinath-kesale-portfolio.vercel.app](https://kashinath-kesale-portfolio.vercel.app)
+- 📧 Email: [kashinathkesale1@gmail.com](mailto:kashinathkesale1@gmail.com)  
+- 🔗 LinkedIn: [linkedin.com/in/kashinath-kesale](https://linkedin.com/in/kashinath-kesale)  
+- 🐙 GitHub: [github.com/Kashinath-Kesale](https://github.com/Kashinath-Kesale)  
+- 💡 LeetCode: [leetcode.com/u/Kashinath_Kesale](https://leetcode.com/u/Kashinath_Kesale)
 
 ---
 
